@@ -1,11 +1,33 @@
 <nav class="navbar navbar-dark bg-inverse">
-  <%= link_to "Home", root_path, class: "navbar-brand" %>
-  <ul class="nav navbar-nav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to "Home", root_path, class: "navbar-brand" %>
 
-    <li class="nav-item active">
-    </li>
-    <li class="nav-item">
-      <%= link_to 'About', page_path('about'), class: 'nav-link' %>
-    </li>
-  </ul>
+        <ul class="nav navbar-nav navbar-nav-left">
+
+          <li class="nav-item">
+            <%= link_to 'About', page_path('about'), class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 col-offset-5">
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li class="nav-item">
+              <%= button_to 'Sair', destroy_user_session_path, class: 'btn btn-default navbar-btn' %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= button_to 'Entrar', new_user_session_path, class: 'btn btn-default navbar-btn' %>
+            </li>
+            <li class="nav-item">
+              <%= button_to 'Registrar', new_user_registration_path, class: 'btn btn-default navbar-btn' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>
