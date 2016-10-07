@@ -9,6 +9,10 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-class ActionDispatch::IntegrationTest
-  include Devise::TestHelpers
+class ActiveSupport::IntegrationTest
+  # Add more helper methods to be used by all tests here...
+  def setup
+  end
+
+  include Devise::Test::ControllerHelpers
 end

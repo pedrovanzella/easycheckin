@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem 'devise', :github => 'plataformatec/devise', :branch => 'master'
 
 gem 'high_voltage', '~> 3.0.0'
 
