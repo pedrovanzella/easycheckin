@@ -1,4 +1,4 @@
-ActiveAdmin.register Flight do
+ActiveAdmin.register Seat do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -12,20 +12,16 @@ ActiveAdmin.register Flight do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  permit_params :code, :schedule, :origin_id, :destionation_id
+  permit_params :row, :number, :flight
 
   form do |f| 
     f.inputs do
-      f.input :code
-      f.input :schedule, as: :text, input_html: { class: 'jsoneditor-target' }
-      f.input :origin, member_label: :code
-      f.input :destination, member_label: :code
-      f.has_many :seats, allow_destroy: true do |s| 
-        s.input :row
-        s.input :number
-      end
+      f.input :row
+      f.input :number
+      f.input :flight, member_label: :code
     end
     f.actions
   end
+
 
 end
