@@ -13,7 +13,7 @@ class TicketsController < ApplicationController
   private
 
   def allowed_params
-    params.permit :checked_in
+    params.require(:ticket).permit(:checked_in)
   end
 
   def set_ticket

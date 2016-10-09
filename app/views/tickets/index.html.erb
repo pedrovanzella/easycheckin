@@ -14,7 +14,7 @@
         <% if t.checked_in %>
           <button class="btn btn-default" disabled>Checked In</button>
         <% else %>
-          <%= link_to 'Check in', ticket_path(t, "ticket['checked_in']" => true), method: :patch, class: 'btn btn-success' %>
+          <%= link_to 'Check in', ticket_path(t, "ticket[checked_in]" => true), method: :patch, class: 'btn btn-success' %>
         <% end %>
       </td>
     </tr>
