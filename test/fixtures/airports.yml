@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+poa:
+  code: POA
+  city: Porto Alegre
+
+gru:
+  code: GRU
+  city: Guarulhos
+
+mia:
+  code: mia
+  city: Miami
