@@ -32,10 +32,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+gem 'cancancan'
 
 gem 'high_voltage', '~> 3.0.0'
 
 gem 'bootstrap', '~> 4.0.0.alpha4'
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
