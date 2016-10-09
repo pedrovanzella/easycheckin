@@ -16,14 +16,14 @@
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
             <li class="nav-item">
-              <%= button_to 'Sair', destroy_user_session_path, class: 'btn btn-default navbar-btn' %>
+              <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn' %>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= button_to 'Entrar', new_user_session_path, class: 'btn btn-default navbar-btn' %>
+              <%= link_to 'Entrar', new_user_session_path, class: 'btn btn-default navbar-btn' %>
             </li>
             <li class="nav-item">
-              <%= button_to 'Registrar', new_user_registration_path, class: 'btn btn-default navbar-btn' %>
+              <%= link_to 'Registrar', new_user_registration_path, class: 'btn btn-default navbar-btn' %>
             </li>
           <% end %>
         </ul>
