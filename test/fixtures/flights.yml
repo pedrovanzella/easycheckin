@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  schedule: 
+  origin_id: 1
+  destination_id: 1
+
+two:
+  code: MyString
+  schedule: 
+  origin_id: 1
+  destination_id: 1
