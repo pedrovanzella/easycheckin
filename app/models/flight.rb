@@ -4,4 +4,6 @@ class Flight < ApplicationRecord
 
   has_many :seats
   accepts_nested_attributes_for :seats, allow_destroy: true
+
+  validates :code, uniqueness: true
 end

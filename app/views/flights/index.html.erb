@@ -1,4 +1,17 @@
 <h1>Vôos</h1>
 
 <table class="table">
+  <tr>
+    <th>Código</th>
+    <th>Origem</th>
+    <th>Destino</th>
+    <th></th>
+  </tr>
+  <% @flights.each do |f| %>
+    <tr>
+      <td><%= f.code %></td>
+      <td><%= f.origin.code %></td>
+      <td><%= f.destination.code %></td>
+    </tr>
+  <% end %>
 </table>

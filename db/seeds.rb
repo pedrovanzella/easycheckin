@@ -6,5 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-Airport.create(code: 'POA', city: 'Porto Alegre')
-Airport.create(code: 'GRU', city: 'Guarulhos')
+poa = Airport.create(code: 'POA', city: 'Porto Alegre')
+gru = Airport.create(code: 'GRU', city: 'Guarulhos')
+mia = Airport.create(code: 'MIA', city: 'Guarulhos')
+
+Flight.create(code: '666', origin: poa, destination: gru)
+Flight.create(code: '171', origin: gru, destination: mia)

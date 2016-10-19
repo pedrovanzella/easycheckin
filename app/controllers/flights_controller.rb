@@ -6,9 +6,6 @@ class FlightsController < ApplicationController
   end
 
   def update
-    if @flight.update(allowed_params)
-      redirect_back(fallback_location: root_path)
-    end
   end
 
   def show
@@ -21,6 +18,6 @@ class FlightsController < ApplicationController
   end
 
   def set_flight
-    @flight = Flight.find(params[:id])
+    @flight = Flight.find(params[:id]).allow(:purchase)
   end
 end
