@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-poa = Airport.create(code: 'POA', city: 'Porto Alegre')
-gru = Airport.create(code: 'GRU', city: 'Guarulhos')
-mia = Airport.create(code: 'MIA', city: 'Guarulhos')
+poa = Airport.find_or_create_by(code: 'POA', city: 'Porto Alegre')
+gru = Airport.find_or_create_by(code: 'GRU', city: 'Guarulhos')
+mia = Airport.find_or_create_by(code: 'MIA', city: 'Guarulhos')
 
-Flight.create(code: '666', origin: poa, destination: gru)
-Flight.create(code: '171', origin: gru, destination: mia)
+f1 = Flight.find_or_create_by(code: '666', origin: poa, destination: gru)
+f2 = Flight.find_or_create_by(code: '171', origin: gru, destination: mia)
+
+('A'..'E').each do |row|
+  (1..55).each do |number|
+    Seat.create(row: row, number: number, flight: f1)
+    Seat.create(row: row, number: number, flight: f2)
+  end
+end

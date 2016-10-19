@@ -9,6 +9,7 @@ class FlightsController < ApplicationController
   end
 
   def show
+    @seats = Seat.where(flight: @flight)
   end
 
   private
@@ -18,6 +19,6 @@ class FlightsController < ApplicationController
   end
 
   def set_flight
-    @flight = Flight.find(params[:id]).allow(:purchase)
+    @flight = Flight.find(params[:id])
   end
 end

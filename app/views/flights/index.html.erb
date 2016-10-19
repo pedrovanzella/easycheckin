@@ -12,6 +12,9 @@
       <td><%= f.code %></td>
       <td><%= f.origin.code %></td>
       <td><%= f.destination.code %></td>
+      <td>
+        <%= link_to 'Comparar', flight_path(f), class: 'btn btn-success' %>
+      </td>
     </tr>
   <% end %>
 </table>

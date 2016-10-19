@@ -1,0 +1,23 @@
+<h1>Vôo <%= @flight.code %></h1>
+
+<div class="row">
+  <div class="col-md-4 col-offset-4">
+    Origem: <%= @flight.origin.code %> - <%= @flight.origin.city %>
+  </div>
+  <div class="col-md-4">
+    Destino: <%= @flight.destination.code %> - <%= @flight.destination.city %>
+  </div>
+</div>
+
+<table class="table">
+  <tr>
+    <th>Assento</th>
+    <th></th>
+  </tr>
+  <% @seats.each do |s| %>
+    <tr>
+      <td><%= s.row %><%= s.number %></td>
+      <td><%= link_to 'Comparar', '#', class: 'btn btn-success' %></td>
+    </tr>
+  <% end %>
+</table>
