@@ -8,7 +8,7 @@
 User.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 poa = Airport.find_or_create_by(code: 'POA', city: 'Porto Alegre')
 gru = Airport.find_or_create_by(code: 'GRU', city: 'Guarulhos')
-mia = Airport.find_or_create_by(code: 'MIA', city: 'Guarulhos')
+mia = Airport.find_or_create_by(code: 'MIA', city: 'Miami')
 
 f1 = Flight.find_or_create_by(code: '666', origin: poa, destination: gru)
 f2 = Flight.find_or_create_by(code: '171', origin: gru, destination: mia)
