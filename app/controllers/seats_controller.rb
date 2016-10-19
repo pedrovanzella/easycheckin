@@ -7,6 +7,12 @@ class SeatsController < ApplicationController
     end
   end
 
+  def show
+    if Ticket.create(user: current_user, flight: @seat.flight, seat: @seat)
+      redirect_back(fallback_location: root_path)
+    end
+  end
+
   private
 
   def allowed_params

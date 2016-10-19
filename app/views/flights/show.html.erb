@@ -18,7 +18,7 @@
     <tr>
       <td><%= s.row %><%= s.number %></td>
       <% if Ticket.where(flight: s.flight, seat: s).empty? %>
-        <td><%= link_to 'Comparar', seat_path(s, "seat[purchase]" => true), method: :patch, class: 'btn btn-success' %></td>
+        <td><%= link_to 'Comparar', seat_path(s), method: :patch, class: 'btn btn-success' %></td>
       <% else %>
         <td><button class="btn btn-default" disabled>Vendido!</button></td>
       <% end %>
