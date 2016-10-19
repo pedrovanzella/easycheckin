@@ -2,7 +2,9 @@ class SeatsController < ApplicationController
   before_action :set_seat, only: [:update]
 
   def update
-    # create ticket
+    if Ticket.create(user: current_user, flight: @seat.flight, seat: @seat)
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   private
