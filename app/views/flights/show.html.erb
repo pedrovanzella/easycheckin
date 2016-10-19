@@ -17,7 +17,7 @@
   <% @seats.each do |s| %>
     <tr>
       <td><%= s.row %><%= s.number %></td>
-      <td><%= link_to 'Comparar', '#', class: 'btn btn-success' %></td>
+      <td><%= link_to 'Comparar', seat_path(s, "seat[purchase]" => true), method: :patch, class: 'btn btn-success' %></td>
     </tr>
   <% end %>
 </table>
