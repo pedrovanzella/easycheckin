@@ -1,5 +1,5 @@
 class SeatsController < ApplicationController
-  before_action :set_seat, only: [:update]
+  before_action :set_seat, only: [:update, :show]
 
   def update
     if Ticket.create(user: current_user, flight: @seat.flight, seat: @seat)
