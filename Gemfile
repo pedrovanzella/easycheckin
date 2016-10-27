@@ -48,6 +48,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
   gem 'rubocop'
+  gem 'railroady'
+
 end
 
 group :development do
