@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :tickets
   resources :flights
   resources :seats
+  resources :notifications
 end

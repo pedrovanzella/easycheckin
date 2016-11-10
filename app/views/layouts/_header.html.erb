@@ -38,6 +38,11 @@
             <li class="nav-item">
               <%= link_to 'Registrar', new_user_registration_path, class: 'btn btn-default navbar-btn' %>
             </li>
+            <% if current_user.admin? %>
+              <li class="nav-item">
+                <%= link_to 'Activity', notifications_path, class: 'btn btn-default navbar-btn' %>
+              </li>
+            <% end %>
           <% end %>
         </ul>
       </div>

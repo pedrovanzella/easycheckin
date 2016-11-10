@@ -1,4 +1,7 @@
 class Flight < ApplicationRecord
+  include PublicActivity::Model
+  tracked
+
   belongs_to :origin, class_name: 'Airport'
   belongs_to :destination, class_name: 'Airport'
 
