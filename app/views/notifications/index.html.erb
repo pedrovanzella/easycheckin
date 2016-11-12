@@ -1,1 +1,5 @@
-<%= render_activities(@activities, layout: :activity) %>
+<h1>Activities</h1>
+
+<% @activities.each do |activity| %>
+    <%= render_activity activity %>
+<% end %>
