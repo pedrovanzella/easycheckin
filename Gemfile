@@ -42,7 +42,7 @@ gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
-gem 'public_activity'
+gem 'public_activity', github: 'chaps-io/public_activity', branch: 'master'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
