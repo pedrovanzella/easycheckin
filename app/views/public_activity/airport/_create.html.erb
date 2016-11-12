@@ -1,1 +1,7 @@
-created an Airport
+created Airport
+
+<% if activity.trackable %>
+    <%= activity.trackable.code %>
+<% else %>
+    which has since been removed
+<% end %>

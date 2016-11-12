@@ -1,1 +1,7 @@
 bought a Ticket
+
+<% if activity.trackable %>
+    to <% activity.trackable.flight.destination.code %> from <% activity.trackable.flight.origin.code %>
+<% else %>
+    which has since been canceled
+<% end %>
