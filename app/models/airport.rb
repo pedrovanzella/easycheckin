@@ -1,4 +1,4 @@
 class Airport < ApplicationRecord
     include PublicActivity::Model
-    tracked
+    tracked owner: ->(controller, model) { controller && controller.current_user }
 end

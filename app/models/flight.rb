@@ -1,6 +1,6 @@
 class Flight < ApplicationRecord
   include PublicActivity::Model
-  tracked
+  tracked owner: ->(controller, model) { controller && controller.current_user }
 
   belongs_to :origin, class_name: 'Airport'
   belongs_to :destination, class_name: 'Airport'
