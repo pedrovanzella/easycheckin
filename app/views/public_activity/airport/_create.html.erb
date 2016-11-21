@@ -1,7 +1,9 @@
-created Airport
-
+<td><%= activity.owner ? activity.owner.email : "Admin" %></td>
+<td>Criou aeroporto 
 <% if activity.trackable %>
     <%= activity.trackable.code %>
 <% else %>
-    which has since been removed
+    que já foi removido
 <% end %>
+</td>
+<td><%= activity.created_at %></td>

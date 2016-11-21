@@ -1,8 +1,15 @@
 <h1>Activities</h1>
 
-<% @activities.each do |activity| %>
-    <div class="well well-sm">
-        <%= activity.owner.email if activity.owner %>
-        <%= render_activity activity %>
-    </div>
-<% end %>
+<table class="table">
+    <th>
+        <td>Usuário</td>
+        <td>Ação</td>
+        <td>Data</td>
+    </th>
+    <% @activities.each do |activity| %>
+        <tr>
+            <td></td>
+            <%= render_activity activity %>
+        </tr>
+    <% end %>
+</table>

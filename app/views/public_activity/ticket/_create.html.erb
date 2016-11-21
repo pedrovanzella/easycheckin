@@ -1,7 +1,9 @@
-bought a Ticket
-
+<td><%= activity.owner ? activity.owner.email : "Admin" %></td>
+<td>Comprou passagem
 <% if activity.trackable %>
-    to <% activity.trackable.flight.destination.code %> from <% activity.trackable.flight.origin.code %>
+    para <% activity.trackable.flight.destination.code %> de <% activity.trackable.flight.origin.code %>
 <% else %>
-    which has since been canceled
+    que já foi removido
 <% end %>
+</td>
+<td><%= activity.created_at %></td>

@@ -1,0 +1,9 @@
+<td><%= activity.owner ? activity.owner.email : "Admin" %></td>
+<td>Criou vôo 
+<% if activity.trackable %>
+    <%= activity.trackable.code %>
+<% else %>
+    que já foi removido
+<% end %>
+</td>
+<td><%= activity.created_at %></td>
